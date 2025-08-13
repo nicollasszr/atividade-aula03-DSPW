@@ -59,7 +59,7 @@ Após resolver todos os desafios e testar seu código, é hora de salvar seu pro
 
 ### 5. Entrega
 
-Para entregar a atividade, envie o link do **SEU** repositório no GitHub (que agora contém o arquivo `atividade.js` com suas respostas) no email marianneladuth@gmail.com com o titulo "Atividade 03 - Desenvolvimento Web 3N". A descrição deverá conter o link do repositório e seu nome completo.
+Para entregar a atividade, envie o link do **SEU** repositório no GitHub (que agora contém o arquivo `atividade.js` com suas respostas) no email marianneladuth@gmail.com com o titulo "Atividade 03 - Desenvolvimento Web 4N". A descrição deverá conter o link do repositório e seu nome completo.
 
 ---
 

@@ -1,5 +1,3 @@
-// Arquivo: atividade.js (Versão com as respostas)
-
 // 1. Importando o array de livros da nossa "base de dados"
 const livros = require('./biblioteca');
 
@@ -10,19 +8,12 @@ const livros = require('./biblioteca');
 // e retorne um novo array com todos os livros desse gênero.
 // ------------------------------------------------------------------------
 
-function encontrarLivrosPorGenero(genero) {
-  // Usamos o método filter para criar um novo array
-  // contendo apenas os livros que passam na condição.
-  const livrosFiltrados = livros.filter(function (livro) {
-    return livro.genero === genero;
-  });
-  return livrosFiltrados;
-}
+// Sua vez
 
 // Teste da Atividade 1
 console.log('--- Atividade 1: Livros de Ficção Científica (Função Tradicional) ---');
-const livrosDeFiccao = encontrarLivrosPorGenero('Ficção Científica');
-console.log(livrosDeFiccao);
+// const livrosDeFiccao = encontrarLivrosPorGenero('Ficção Científica');
+// console.log(livrosDeFiccao);
 
 
 // ------------------------------------------------------------------------
@@ -31,16 +22,14 @@ console.log(livrosDeFiccao);
 // Faça a mesma função da Atividade 1, mas agora usando Arrow Function.
 // ------------------------------------------------------------------------
 
-const encontrarLivrosPorGeneroArrow = (genero) => {
-  // A lógica é a mesma, mas a sintaxe da função é mais enxuta.
-  // Como temos apenas uma linha de retorno, podemos omitir as chaves {} e a palavra 'return'.
-  return livros.filter(livro => livro.genero === genero);
-};
+
+// Sua vez
+
 
 // Teste da Atividade 2
 console.log('\n--- Atividade 2: Livros de Distopia (Arrow Function) ---');
-const livrosDeDistopia = encontrarLivrosPorGeneroArrow('Distopia');
-console.log(livrosDeDistopia);
+// const livrosDeDistopia = encontrarLivrosPorGeneroArrow('Distopia');
+// console.log(livrosDeDistopia);
 
 
 // ------------------------------------------------------------------------
@@ -50,16 +39,14 @@ console.log(livrosDeDistopia);
 // de todos os livros da biblioteca.
 // ------------------------------------------------------------------------
 
-const obterApenasTitulos = () => {
-  // O método .map() transforma cada item do array original em algo novo.
-  // Aqui, para cada objeto 'livro', retornamos apenas a sua propriedade 'titulo'.
-  return livros.map(livro => livro.titulo);
-};
+
+// Sua vez
+
 
 // Teste da Atividade 3
 console.log('\n--- Atividade 3: Lista de todos os títulos ---');
-const todosOsTitulos = obterApenasTitulos();
-console.log(todosOsTitulos);
+// const todosOsTitulos = obterApenasTitulos();
+// console.log(todosOsTitulos);
 
 
 // ------------------------------------------------------------------------
@@ -71,40 +58,35 @@ console.log(todosOsTitulos);
 // Dica: você precisará encadear (usar um após o outro) os métodos filter.
 // ------------------------------------------------------------------------
 
-const livrosDeAutorAposAno = (autor, ano) => {
-  // Encadeamento de métodos: o resultado do primeiro .filter()
-  // (um array filtrado) é usado como base para o segundo .filter().
-  return livros
-    .filter(livro => livro.autor === autor)
-    .filter(livro => livro.anoPublicacao > ano);
-};
+
+// Sua vez
+
 
 // Teste da Atividade 4
 console.log('\n--- Atividade 4: Livros de J.R.R. Tolkien publicados após 1950 ---');
-const livrosTolkienPos1950 = livrosDeAutorAposAno('J.R.R. Tolkien', 1950);
-console.log(livrosTolkienPos1950);
+// const livrosTolkienPos1950 = livrosDeAutorAposAno('J.R.R. Tolkien', 1950);
+// console.log(livrosTolkienPos1950);
 
 
-// Arquivo: atividade.js (Solução da Atividade 5)
-
-// [ ... outras atividades ... ]
 
 // ------------------------------------------------------------------------
 // ATIVIDADE 5: Criando Cartões de Apresentação com Desestruturação
+//
+// O objetivo agora é criar uma função que gere "cartões" de apresentação
+// para os livros. Cada cartão será uma string com o formato:
+// "Título: [TÍTULO] | Autor: [AUTOR] | Ano: [ANO DE PUBLICAÇÃO]"
+//
+// Para tornar o código mais limpo, você deve usar a DESESTRUTURAÇÃO
+// para extrair as propriedades 'titulo', 'autor' e 'anoPublicacao'
+// de cada objeto livro diretamente no parâmetro da função do .map().
 // ------------------------------------------------------------------------
 
-const criarCartoesDeLivros = () => {
-  // Usamos .map() para transformar cada objeto do array em uma string.
-  // A mágica acontece no parâmetro: ({ titulo, autor, anoPublicacao })
-  // Isso diz ao JavaScript: "Para cada objeto do array, em vez de me dar
-  // o objeto inteiro (que chamaríamos de 'livro'), por favor, já extraia
-  // (desestruture) apenas estas três propriedades para mim."
-  return livros.map(({ titulo, autor, anoPublicacao }) => {
-    return `Título: ${titulo} | Autor: ${autor} | Ano: ${anoPublicacao}`;
-  });
-};
 
+
+
+// Sua vez
+  
 // Teste da Atividade 5
 console.log('\n--- Atividade 5: Cartões de Apresentação dos Livros ---');
-const cartoes = criarCartoesDeLivros();
-console.log(cartoes);
+// const cartoes = criarCartoesDeLivros();
+// console.log(cartoes);
